@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.vouchify.vouchify.view.CustomImageButton
+            android:id="@+id/item_friend_imv_profile"
+            android:layout_width="@dimen/item_friend_image"
+            android:layout_height="@dimen/item_friend_image"
+            android:layout_marginEnd="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:id="@+id/item_friend_txt_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/item_search_result_text" />
+
+                <com.vouchify.vouchify.view.CustomClickTextView
+                    android:id="@+id/item_friend_txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/item_friend_txt_distance"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/item_search_result_name"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/business_vouches"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/item_search_result_text" />
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:id="@+id/item_friend_txt_voucher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:drawableEnd="@drawable/ic_vouches_count"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/item_search_result_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.vouchify.vouchify.view.CustomTextView
+        android:id="@+id/item_friend_txt_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/ic_checked"
+        android:gravity="center_vertical"
+        android:textColor="@color/brown"
+        android:textSize="@dimen/item_search_result_text"
+        android:textStyle="bold" />
+</LinearLayout>

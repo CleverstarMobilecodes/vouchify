@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitEnd"
+        android:src="@drawable/imv_background" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/search_result_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:clipToPadding="false"
+        android:padding="15dp"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.vouchify.vouchify.view.CustomTextView
+                android:id="@+id/search_result_txt_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey"
+                android:gravity="center"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <com.vouchify.vouchify.view.CustomTextView
+                android:id="@+id/search_result_txt_sorry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/sorry_no_business_found"
+                android:textColor="@color/brown" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/search_result_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:nestedScrollingEnabled="true"
+                tools:targetApi="lollipop" />
+
+            <com.vouchify.vouchify.view.CustomTextView
+                android:id="@+id/search_result_txt_did_not_find"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="@string/did_not_find_the_business"
+                android:textSize="@dimen/search_business_bottom"
+                android:textStyle="bold" />
+
+            <com.vouchify.vouchify.view.CustomTextView
+                android:id="@+id/search_result_btn_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_auth_bg"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/add_new_business_now"
+                android:textSize="@dimen/item_vouches_business_name"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>

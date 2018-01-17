@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="65dp">
+
+        <com.vouchify.vouchify.view.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thanks"
+            android:textColor="#6d6d6d"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.vouchify.vouchify.view.CustomTextView
+            android:id="@+id/share_content_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/nothanks_content_text"
+            android:textColor="#6d6d6d"
+            android:textSize="14sp" />
+
+        <com.vouchify.vouchify.view.CustomClickTextView
+            android:id="@+id/share_btn_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/auth_view_spacing"
+            android:background="@drawable/btn_auth_bg"
+            android:gravity="center"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/done"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_text_size"
+            android:textStyle="bold"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+</FrameLayout>

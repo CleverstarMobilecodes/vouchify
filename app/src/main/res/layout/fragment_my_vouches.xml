@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:contentDescription="@null"-->
+    <!--android:scaleType="fitEnd"-->
+    <!--android:src="@drawable/imv_background" />-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_vouches_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:clipToPadding="false" />
+
+    <com.vouchify.vouchify.view.CustomTextView
+        android:id="@+id/my_vouches_txt_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:gravity="center"
+        android:paddingTop="?attr/actionBarSize"
+        android:text="@string/there_are_no_vouches"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="gone" />
+</FrameLayout>

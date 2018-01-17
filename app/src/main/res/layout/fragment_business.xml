@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+    <include layout="@layout/layout_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/business_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:id="@+id/business_ll_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <com.vouchify.vouchify.view.CustomImageButton
+                    android:id="@+id/business_imv_business"
+                    android:layout_width="@dimen/profile_imv_avatar"
+                    android:layout_height="@dimen/profile_imv_avatar"
+                    android:layout_margin="10dp" />
+
+                <com.vouchify.vouchify.view.CustomClickTextView
+                    android:id="@+id/business_txt_business_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/business_imv_business"
+                    android:textColor="#6d6d6d"
+                    android:textSize="@dimen/item_vouches_business_name"
+                    android:textStyle="bold" />
+
+                <com.vouchify.vouchify.view.CustomClickTextView
+                    android:id="@+id/vouch_txt_business_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/business_txt_business_name"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/business_imv_business"
+                    android:textColor="#a4a4a4"
+                    android:textSize="@dimen/item_vouches_business_tags" />
+
+                <com.vouchify.vouchify.view.CustomClickTextView
+                    android:id="@+id/business_txt_business_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vouch_txt_business_des"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/business_imv_business"
+                    android:textColor="#a4a4a4"
+                    android:textSize="@dimen/item_vouches_business_tags"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/business_all_vouch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/business_tab_color"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/business_all_vouches"
+                    android:textColor="@color/business_text" />
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:id="@+id/business_txt_vouches_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:drawableEnd="@drawable/ic_vouches_count"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_primary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/business_friend_vouch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/business_tab_color"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:visibility="gone">
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/business_friend_vouches"
+                    android:textColor="@color/business_text" />
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:id="@+id/business_txt_friend_vouches_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:drawableEnd="@drawable/ic_vouches_count"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_primary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:id="@+id/business_vouch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/ic_business_vouch"
+                    android:gravity="center"
+                    android:text="@string/vouch"
+                    android:textColor="@color/business_text"
+                    android:textSize="@dimen/business_btn_txt" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="1dp" />
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:id="@+id/business_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/ic_business_phone"
+                    android:gravity="center"
+                    android:text="@string/call"
+                    android:textColor="@color/business_text"
+                    android:textSize="@dimen/business_btn_txt" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="1dp" />
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:id="@+id/business_enquire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/ic_business_email"
+                    android:gravity="center"
+                    android:text="@string/enquire"
+                    android:textColor="@color/business_text"
+                    android:textSize="@dimen/business_btn_txt"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/business_rg_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/business_cb_about"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/business_tab_bg"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/tab_business_about"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/tab_about"
+                    android:textColor="@color/tab_text"
+                    android:textSize="@dimen/business_tab_text" />
+
+                <RadioButton
+                    android:id="@+id/business_cb_vouches"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/business_tab_bg"
+                    android:button="@null"
+                    android:drawableTop="@drawable/tab_business_vouches"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/tab_vouches"
+                    android:textColor="@color/tab_text"
+                    android:textSize="@dimen/business_tab_text" />
+
+                <RadioButton
+                    android:id="@+id/business_cb_photos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/business_tab_bg"
+                    android:button="@null"
+                    android:drawableTop="@drawable/tab_business_photos"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/tab_photos"
+                    android:textColor="@color/tab_text"
+                    android:textSize="@dimen/business_tab_text" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/business_ll_about"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/business_tab_padding"
+                android:visibility="visible">
+
+                <WebView
+                    android:id="@+id/business_text_about_short"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/business_contact_detail_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true"
+                    tools:targetApi="lollipop" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/business_address_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true"
+                    tools:targetApi="lollipop" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/business_map_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/business_ll_vouches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/business_tab_padding"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/business_vouch_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spn_vouches_bg" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/business_vouches_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/business_ll_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:id="@+id/business_text_not_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/business_tab_padding"
+                    android:layout_marginStart="@dimen/business_tab_padding"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/no_image_found"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/business_tab_txt" />
+
+                <com.vouchify.vouchify.view.BusinessPhotoView
+                    android:id="@+id/business_photo_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:id="@+id/vouch_btn_add_an_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/business_tab_padding"
+                    android:layout_marginStart="@dimen/business_tab_padding"
+                    android:layout_marginTop="30dp"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_action_add"
+                    android:gravity="center_vertical"
+                    android:text="@string/add_an_image"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/business_tab_txt" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

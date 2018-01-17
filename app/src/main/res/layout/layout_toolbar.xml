@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/color_primary"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <com.vouchify.vouchify.view.CustomImageButton
+        android:id="@+id/toolbar_btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:visibility="invisible" />
+
+    <com.vouchify.vouchify.view.CustomClickTextView
+        android:id="@+id/toolbar_txt_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:background="@drawable/btn_toolbar_bg"
+        android:gravity="center"
+        android:paddingEnd="@dimen/toolbar_btn_padding_side"
+        android:paddingStart="@dimen/toolbar_btn_padding_side"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/toolbar_btn_text"
+        android:visibility="invisible" />
+
+    <com.vouchify.vouchify.view.CustomTextView
+        android:id="@+id/toolbar_txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/toolbar_title"
+        tools:ignore="RelativeOverlap" />
+
+    <com.vouchify.vouchify.view.CustomClickTextView
+        android:id="@+id/toolbar_txt_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="6dp"
+        android:background="@drawable/btn_toolbar_bg"
+        android:gravity="center"
+        android:paddingEnd="@dimen/toolbar_btn_padding_side"
+        android:paddingStart="@dimen/toolbar_btn_padding_side"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/toolbar_btn_text"
+        android:visibility="invisible" />
+
+    <com.vouchify.vouchify.view.CustomImageButton
+        android:id="@+id/toolbar_btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp" />
+</RelativeLayout>

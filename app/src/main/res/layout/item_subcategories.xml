@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vouchify.vouchify.view.CustomClickTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_activities_tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:drawableEnd="@drawable/ic_action_details"
+    android:gravity="center_vertical"
+    android:paddingBottom="10dp"
+    android:paddingEnd="0dp"
+    android:paddingStart="5dp"
+    android:paddingTop="10dp"
+    android:textColor="#515151"
+    android:textSize="16sp" />

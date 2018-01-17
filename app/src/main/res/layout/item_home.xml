@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <com.vouchify.vouchify.view.ScalingImageView
+        android:id="@+id/item_home_imv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop" />
+
+    <com.vouchify.vouchify.view.CustomClickTextView
+        android:id="@+id/item_home_tv"
+        style="@style/itemHome" />
+</RelativeLayout>

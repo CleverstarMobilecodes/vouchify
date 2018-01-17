@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitEnd"
+        android:src="@drawable/imv_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="@dimen/auth_screen_padding">
+
+        <com.vouchify.vouchify.view.CustomImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/imv_logo" />
+
+        <com.vouchify.vouchify.view.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/auth_step_button_margin_top"
+            android:gravity="left"
+            android:padding="10dp"
+            android:text="@string/business_add_image"
+            android:textSize="@dimen/auth_content_title"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/business_add_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/business_photo_imv_height"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/addimageback">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/business_camera_icon"
+                    android:layout_width="@dimen/business_camera_icon_width"
+                    android:layout_height="@dimen/business_camera_icon_height"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/camera_icon"
+                    android:visibility="visible"
+                    />
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:id="@+id/txt_add_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/add_image"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/business_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:layout_margin="@dimen/business_add_imv_margin"
+                android:visibility="gone"
+                />
+
+        </FrameLayout>
+
+        <com.vouchify.vouchify.view.CustomClickTextView
+            android:id="@+id/add_image_btn_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/auth_step_button_margin_top"
+            android:background="@drawable/btn_auth_bg"
+            android:gravity="center"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/done"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+</FrameLayout>

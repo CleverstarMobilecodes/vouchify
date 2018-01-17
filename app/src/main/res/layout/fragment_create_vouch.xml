@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:contentDescription="@null"-->
+        <!--android:scaleType="fitEnd"-->
+        <!--android:src="@drawable/imv_background" />-->
+
+
+    <include layout="@layout/layout_toolbar" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/vouch_pan_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/edit_vouch_view_spacing"
+            android:paddingStart="@dimen/edit_vouch_view_spacing">
+
+            <LinearLayout
+                android:id="@+id/edit_vouch_ll_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_vouch_view_spacing"
+                android:background="@drawable/vouch_view_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/edit_vouch_view_spacing"
+                android:visibility="gone">
+
+                <com.vouchify.vouchify.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_vouch_service"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/edit_vouch_edt" />
+
+            </LinearLayout>
+
+            <com.vouchify.vouchify.view.CustomEditText
+                android:id="@+id/edit_vouch_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_vouch_view_spacing"
+                android:background="@drawable/vouch_view_bg"
+                android:gravity="top"
+                android:hint="@string/edit_vouch_description_hint"
+                android:lines="4"
+                android:padding="10dp"
+                android:textColor="@color/brown"
+                android:textSize="@dimen/edit_vouch_edt" />
+
+            <com.vouchify.vouchify.view.CustomClickTextView
+                android:id="@+id/edit_vouch_btn_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_vouch_view_spacing"
+                android:background="@drawable/btn_auth_bg"
+                android:gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:text="@string/delete_vouch"
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <com.vouchify.vouchify.view.CustomClickTextView
+                android:id="@+id/edit_vouch_btn_continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_vouch_view_spacing"
+                android:background="@drawable/btn_auth_bg"
+                android:gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:text="@string/done"
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <com.vouchify.vouchify.view.CustomClickTextView
+                android:id="@+id/edit_vouch_btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_vouch_view_spacing"
+                android:gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:text="@string/cancel"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/btn_text_size"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"></LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:button="@drawable/edit_vouch_cb_button"
+    android:gravity="center_vertical"
+    android:padding="3dp"
+    android:textColor="@color/black"
+    android:textSize="@dimen/edit_vouch_edt" />

@@ -1,0 +1,54 @@
+<resources>
+
+    <dimen name="error_txt">14sp</dimen>
+    <dimen name="btn_radius">30dp</dimen>
+    <dimen name="edt_padding">8dp</dimen>
+    <dimen name="btn_padding">10dp</dimen>
+    <dimen name="btn_text_size">14sp</dimen>
+    <dimen name="edt_text_size">14sp</dimen>
+    <dimen name="toolbar_title">16sp</dimen>
+    <dimen name="error_txt_margin">25dp</dimen>
+
+    <!-- Suburb-->
+    <dimen name="suburb_item_text">12sp</dimen>
+    <dimen name="suburb_item_padding">8sp</dimen>
+
+    <!-- Auth -->
+    <dimen name="auth_bottom_text">11sp</dimen>
+    <dimen name="auth_view_spacing">10dp</dimen>
+    <dimen name="auth_content_text">14sp</dimen>
+    <dimen name="auth_content_title">15sp</dimen>
+    <dimen name="auth_screen_padding">20dp</dimen>
+    <dimen name="auth_edt_drawable_padding">15dp</dimen>
+    <dimen name="auth_screen_padding_bottom">15dp</dimen>
+    <dimen name="auth_step_button_margin_top">20dp</dimen>
+    <dimen name="connect_btn_text_size">13sp</dimen>
+
+    <!-- Profile -->
+    <dimen name="profile_imv_avatar">80dp</dimen>
+    <dimen name="profile_drawable_padding">5dp</dimen>
+    <dimen name="profile_btn_padding">6dp</dimen>
+    <dimen name="profile_btn_margin">60dp</dimen>
+    <dimen name="profile_txt_margin">25dp</dimen>
+    <dimen name="profile_txt_padding">10dp</dimen>
+    <dimen name="profile_txt_text">15sp</dimen>
+    <dimen name="profile_txt_name">17sp</dimen>
+
+    <!-- Verify -->
+    <dimen name="verify_edt_size">40dp</dimen>
+    <dimen name="verify_view_sep">12dp</dimen>
+    <dimen name="verify_edt_text">20sp</dimen>
+    <dimen name="verify_refresh_text">17sp</dimen>
+
+    <!-- Menu -->
+    <dimen name="menu_profile_imv">40dp</dimen>
+    <dimen name="menu_item_text">16sp</dimen>
+    <dimen name="menu_item_title">20sp</dimen>
+    <dimen name="menu_item_padding">10dp</dimen>
+
+    <!-- Tab bar -->
+    <dimen name="item_tab_text">10sp</dimen>
+    <dimen name="toolbar_btn_text">16sp</dimen>
+    <dimen name="toolbar_btn_padding_side">13sp</dimen>
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/auth_screen_padding">
+
+        <com.vouchify.vouchify.view.CustomImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:src="@drawable/ic_action_congratulations" />
+
+        <com.vouchify.vouchify.view.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/auth_step_button_margin_top"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/sign_up_finish_text"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/auth_content_title"
+            android:textStyle="bold" />
+
+        <com.vouchify.vouchify.view.CustomClickTextView
+            android:id="@+id/finish_btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/auth_step_button_margin_top"
+            android:background="@drawable/btn_auth_bg"
+            android:gravity="center"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/start_using_vouchify"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

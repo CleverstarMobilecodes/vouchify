@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no"/>
+				
+		<title>Vouchify</title>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+		
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Bootstrap -->
+		<link href="https://vouchify.com.au/assets/default/css/font-awesome.css" rel="stylesheet">
+		<link href="https://vouchify.com.au/assets/default/css/bootstrap.css" rel="stylesheet">
+		<!--<link href="https://vouchify.com.au/assets/default/css/select2.min.css" rel="stylesheet">
+		<link href="https://vouchify.com.au/assets/default/css/selectize.css" rel="stylesheet">-->
+		<link href="https://vouchify.com.au/assets/default/css/bootstrap-theme.css" rel="stylesheet">
+		<link href="https://vouchify.com.au/assets/default/css/chosen.css" rel="stylesheet">
+		
+		<script src="https://vouchify.com.au/assets/default/js/jquery.min.js"></script>
+		<script src="https://vouchify.com.au/assets/default/js/jquery-ui.js"></script>
+		<!--<script src="https://vouchify.com.au/assets/default/js/selectize.min.js"></script>-->
+		<script src="https://vouchify.com.au/assets/default/js/bootstrap.js"></script>
+		<!--<script src="https://vouchify.com.au/assets/default/js/select2.min.js"></script>-->
+		<script src="https://vouchify.com.au/assets/default/js/chosen.jquery.js"></script>
+		
+		
+		<script src="https://vouchify.com.au/assets/default/js/jquery.form.js"></script>
+		<script src="https://vouchify.com.au/assets/default/js/script.js"></script>
+	</head>
+	<body class="">
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".my_submit").removeAttr('disabled'); 
+		$('.ajax_form').submit(function(event){
+		var $submitBTN = $(this).find('.my_submit');
+		$submitBTN.attr('disabled','disabled');
+		var posturl=$(this).attr('action');
+		var $this = $(this).closest('form');
+		var formID =$(this).attr('id');
+		var formClass =$(this).attr('class');
+		$(this).find('.ajax_alert').removeClass('alert-danger').addClass('alert-success').css('display','block').children('.ajax_message').html('Please wait...');
+		if(!formID)
+		formID = formClass;
+		$(this).ajaxSubmit({
+			  url: posturl,
+			  dataType: 'json',
+			  success: function(response){
+				$submitBTN.removeAttr('disabled');
+				if(response.success)
+				{
+				  $($this).find('.ajax_alert').removeClass('alert-danger').addClass('alert-success');
+				}
+				else
+				{
+				  $($this).find('.ajax_alert').removeClass('alert-success').addClass('alert-danger');
+				}
+				if(response.message)
+				{
+					$($this).find('.ajax_alert').children('.ajax_message').html(response.message);
+				}
+				else
+				{
+					$($this).find('.ajax_alert').hide();
+				}
+				if(response.redirectURL)
+				{
+					
+					setTimeout(function(){
+						$(".ajax_alert").hide();
+						window.location.href=response.redirectURL;
+					},10);
+					
+				}
+				
+				if(response.scrollToThisForm)
+				scrollToElement('#'+formID,1000);
+				if(response.selfReload)
+				window.location.reload();
+				if(response.resetForm)
+				$($this).resetForm();
+				if(response.changeLoginState)
+				changeLoginState(response);
+				if(response.callBackFunction)
+				callBackMe(response.callBackFunction,response);
+			  
+			  },
+			  error:function(response){
+				$submitBTN.removeAttr('disabled');
+				$($this).find('.ajax_alert').removeClass('alert-success').addClass('alert-danger');
+				$($this).find('.ajax_alert').children('.ajax_message').html('Internet connection error! Please try again.');
+			  }
+			});
+	  return false;
+	  });
+	});
+	function callBackMe(functionName,data)
+	{
+	  window[functionName](data);
+	}
+	function scrollToElement(element,speed)
+	{
+	  $('html, body').animate({scrollTop:$(element).position().top + 0},speed);
+	}
+</script>
+<script type="text/javascript">
+$(function(){
+  $('.close_alert').click(function(){
+	$(this).closest('.alert').hide();
+  })
+})
+</script>
+ <style type="text/css">
+.display-hide{
+	display: none;
+}
+
+</style>
+
+<div class="main-content thankyou-section terms-sevices">
+    <div class="container">
+      <div class="verify_info">
+        <h4>Vouchify Pty Ltd Privacy Policy</h4>
+
+	<br>
+
+        <p class="submitted_text"> <b> Implementation date</b></p>
+        <p class="submitted_text"> This Privacy Policy was implemented on and is effective from <b>7 January 2016</b>. </p>
+
+	<br>
+
+        <p class="submitted_text"> <b> Terms </b> </p>
+        <p class="submitted_text"> The terms "<b>we</b>", "<b>us</b>", and "<b>Vouchify</b>" refer to Vouchify Pty Ltd., a company incorporated in Australia.</p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"> <b>Table of Contents</b> </p>
+        <p class="submitted_text"> 1.  What is this policy about?</p>
+        <p class="submitted_text"> 2.  Your privacy is important to us</p>
+        <p class="submitted_text"> 3.  What kinds of information do we collect?</p>
+        <p class="submitted_text"> 4.  How do we collect your personal information?</p>
+        <p class="submitted_text"> 5.  How does Vouchify use your information?</p>
+        <p class="submitted_text"> 6.  Can I refuse to give Vouchify my personal information?</p>
+        <p class="submitted_text"> 7.  Does Vouchify share your information with third parties?</p>
+        <p class="submitted_text"> 8.  How does Vouchify protect your personal information?</p>
+        <p class="submitted_text"> 9.  How accurate is the information and how do I access and correct my account information or delete my information?</p>
+        <p class="submitted_text"> 10. Children&#39;s Privacy</p>
+        <p class="submitted_text"> 11. Resolving your privacy concerns and complaints</p>
+        <p class="submitted_text"> 12  Modifications to our Privacy Policy</p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"> <b> 1.&nbsp;&nbsp;What is this policy about?</b></p>
+
+	<br>
+
+        <p class="submitted_text"> This Privacy Policy describes our policies on the collection, use, storage and disclosure of information about you, in connection with your use of our services (including services offered through our mobile applications, websites, other platforms, SMS messages and emails (together referred to as "Services"). </p>
+        <p class="submitted_text"> By using our Services, you consent to our collection, use, and disclosure of information about you as described in this Privacy Policy.</p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"> <b>2.&nbsp;&nbsp;Your privacy is important to us</b></p>
+
+	<br>
+
+        <p class="submitted_text"> We are committed to protecting the confidentiality and privacy of your personal information. We comply with the various obligations set out in the Privacy Act 1988 (Cth) ("Privacy Act") including the Australian Privacy Principles. </p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"> <b>3.&nbsp;&nbsp;What kinds of information do we collect? </b></p>
+
+	<br>
+
+        <p class="submitted_text"> Vouchify collects and compiles reviews and recommendations for businesses and service providers. Vouchify aims to become the &#39;go to&#39; resource for finding businesses and services that are recommended by people within your network who you trust. </p>
+        <p class="submitted_text"> We collect personal information that is reasonably necessary for us to provide the best service to you and to allow us to carry on our business efficiently. </p>
+        <p class="submitted_text"> The main types of personal information we may collect about you, includes but is not limited to: </p>
+
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;your contact details (such as your name, email address, mobile number, location);</p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;your date of birth; </p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;your gender;</p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;your Facebook profile photo;</p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;your Facebook friends list information; and </p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;records of your interactions with us.</p>
+
+	<br>
+       
+        <p class="submitted_text"> Some of these details may be collected upon setting up a User Account, updating Account details, when businesses or service providers send out a review or recommendation request to their customers, or when users provide reviews or recommendations. We may use this information to verify your identity, to help identify friend connections, to share public content with your friends and to ensure reviews and recommendations are genuine. 
+There may be personal information provided by a user within a review or recommendation. This information is not moderated by Vouchify and may be displayed to other users. 
+Each time you visit Vouchify&#39;s websites and mobile applications we, or our Internet Service Provider (ISP), may collect information about you, including a record of the date and time of your visit, which pages you viewed and forms you completed and your IP address. 
+Vouchify&#39;s websites and mobile applications make use of technology called cookies. Cookies are small pieces of information stored on your hard drive or in memory. Most internet browsers are set up to accept cookies but you can disable cookies if you wish to. We use cookies to improve the functionality of our websites and mobile applications. Please note that if you disable cookies you may not be able to access certain areas or experience the additional features offered with the enablement of cookies.
+Our websites and mobile applications contain links to the websites of other organisations or businesses. Linked websites are responsible for their own privacy practices and you should check those websites for their respective privacy statements. </p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"> <b>4.&nbsp;&nbsp;How do we collect your personal information? </b></p>
+
+	<br>
+
+        <p class="submitted_text"> Vouchify generally collects your personal information directly from you (or, if applicable, from your authorised nominated representative) when you use our Services. When businesses or service providers use the Services to send review or recommendation requests, their customer email addresses or mobile numbers will be stored by us but will not be shared with others. Vouchify also collects information from businesses and service providers such as mobile numbers or email address of their customers in order to seek a recommendation or review.</p>
+        <p class="submitted_text"> However, there are certain instances where we will collect information about you from third parties such as agents or service providers where it is unreasonable or impracticable to collect it directly from you. We may also get lists and business information that may include personal information from other sources, from other companies and from public documents. </p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"><b> 5.&nbsp;&nbsp;How does Vouchify use your information? </b></p>
+
+	<br>
+
+        <p class="submitted_text"> The purposes for which this information may be used include, but is not limited to: </p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;verifying your identity;</p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;establishing your User Account;</p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;maintaining or updating your User Account details; </p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;identifying connections between users;</p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;providing our Services to you, including directory services and promotions;</p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;managing our relationship with you; </p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;generating a business or service provider profile for public display;</p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;helping us perform research and analysis in order to improve on and expand our business and the Services we offer to you; and</p>
+        <p class="submitted_text"> &nbsp;&nbsp;-&nbsp;promoting and marketing services to you where you have indicated your interest in receiving promotional or marketing material;</p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"> <b> 6.&nbsp;&nbsp;Can I refuse to give Vouchify my personal information? </b></p>
+
+	<br>
+
+        <p class="submitted_text"> You can refuse to provide us with your personal information (or use a pseudonym when dealing with us).  However, if you refuse to provide us with this information, we may not be able to provide some or all of our Services to you.  We also reserve the right to terminate your User Account. </p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"> <b>7.&nbsp;&nbsp;Does Vouchify share your information with third parties? </b></p>
+
+	<br>
+
+        <p class="submitted_text"> We may exchange personal information with our business advisors, agents, contractors and external service providers as necessary to conduct our business (such as infrastructure hosting, email and SMS providers and payment processing service providers). Some of these entities or their parent entities may be based overseas (primarily based in the USA) and are bound to comply with similar privacy obligations.  </p>
+        <p class="submitted_text"> We may disclose your information to Australian regulators and government entities established to help identify illegal activity and fraud and law enforcement agencies if legally required to do so. </p>
+        <p class="submitted_text"> We will not sell your details to any third parties. Where it is necessary for us to give third parties access to your personal information, we will take reasonable precautions to ensure that those third parties comply with the Privacy Act and the Australian Privacy Principles.</p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"><b> 8.&nbsp;&nbsp;How does Vouchify protect your personal information? </b></p>
+
+	<br>
+
+        <p class="submitted_text"> We take reasonable steps to ensure that your personal information is safe and secure from unauthorised use and disclosure. </p>
+        <p class="submitted_text"> However, due to the inherent nature of the internet, we are unable to always ensure that information will be securely transmitted to us or will be securely stored. Accordingly, information is provided to us at your own risk.  </p>
+        <p class="submitted_text"> To assist us in keeping Vouchify secure, if you become aware of any unauthorised use of your User Account or unauthorised use of your personal information in connection with our Services please <a href="mailto:support@vouchify.com.au">Contact Us</a> immediately so that we can take effective steps to resolve the matter.</p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"><b> 9.&nbsp;&nbsp;How accurate is the information and how do I access and correct my account information or delete my information? </b></p>
+
+	<br>
+
+        <p class="submitted_text"> We take all reasonable precautions to ensure that the personal information we collect, use and disclose is accurate, complete and up to date. </p>
+        <p class="submitted_text"> Should you wish to access, correct or update your personal information we encourage you to log into your User Account and update your details. You may also close your User Account once you have logged in. If you opt to close your User Account, we will remove your public posts from view or dissociate them from your account profile. However, we may retain information about you for the purposes authorised under this Privacy Policy unless prohibited by law including to prevent, investigate, or identify possible wrongdoing in connection with the use of our Services or to comply with our legal obligations. Please note that businesses cannot remove their business listings or recommendations by closing their accounts. </p>
+        <p class="submitted_text"> If for any reason you are having difficulty amending or deleting your information, please <a href="mailto:support@vouchify.com.au">Contact Us</a>.  </p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"><b> 10.&nbsp;&nbsp;Children&#39;s Privacy </b></p>
+
+	<br>
+
+        <p class="submitted_text"> Vouchify requests that a child&#39;s parent or legal guardian consent to the child&#39;s use of the Services and explains the Privacy Policy to them prior to use. If you become aware that a child has provided us with personal information without parental consent, please <a href="mailto:support@vouchify.com.au">Contact Us</a>.  </p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"><b> 11.&nbsp;&nbsp;Resolving your privacy concerns and complaints </b></p>
+
+	<br>
+
+        <p class="submitted_text"> If you have any questions or feedback about privacy, please do not hesitate to <a href="mailto:support@vouchify.com.au">Contact Us</a>.  </p>
+        <p class="submitted_text"> If you wish to make a complaint about the way in which we have handled your personal information or believe we have breached the Privacy Act or the Australian Privacy Principles, you may contact us as set out below: </p>
+
+	<br>
+
+        <p class="submitted_text"> Email:	<a href="mailto:support@vouchify.com.au">support@vouchify.com.au</a> </p>
+
+	<br>
+
+        <p class="submitted_text"> Address:	Privacy Officer </p>
+        <p class="submitted_text"> Vouchify Pty Ltd </p>
+        <p class="submitted_text"> PO BOX 939 ROSE BAY NSW 2029 </p>
+
+	<br>
+
+        <p class="submitted_text"> We will acknowledge your complaint as soon as reasonably possible after receipt. We will also let you know if we need any additional information from you in order to resolve your complaint. </p>
+        <p class="submitted_text"> We always strive to resolve complaints as quickly as possible and generally within 30 days of receipt. If your complaint is taking longer than expected to resolve, we will contact you with an update and a date by which you can reasonably expect a response.  </p>
+        <p class="submitted_text"> If you are not satisfied with the manner in which we have handled your complaint or with our response you may seek an external review of your complaint from the regulator. </p>
+
+	<br>
+
+        <p class="submitted_text"> The Office of the Australian Information Commissioner (OAIC) </p>
+        <p class="submitted_text"> Website: 	<a href="http://www.oaic.gov.au">www.oaic.gov.au</a> </p>
+        <p class="submitted_text"> Email:		<a href="mailto:enquiries@oaic.gov.au">enquiries@oaic.gov.au</a></p>
+        <p class="submitted_text"> Phone: 	1300 363 992 </p>
+        <p class="submitted_text"> Address:	Office of the Australian Information Commissioner </p>
+        <p class="submitted_text"> GPO Box 5218</p>
+        <p class="submitted_text"> Sydney NSW 2001 </p>
+
+	<br>
+	<br>
+
+        <p class="submitted_text"><b> 12.&nbsp;&nbsp;Modifications to our Privacy Policy </b></p>
+
+	<br>
+
+        <p class="submitted_text"> We may modify the manner in which we handle personal information from time to time for any reason. If we make a change, this Policy will be updated accordingly. An updated Policy will become effective immediately for new users registering accounts after that date and will become effective for pre-existing users 30 days after implementation. Accordingly, please check our Privacy Policy periodically. By continuing to access or use the Services after the 30-day period, you agree to the revised Privacy Policy. </p>
+
+	<br>
+	<br>
+       
+    </div>
+  </div>
+</div>
+  </body>
+</html>

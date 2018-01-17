@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="grey">#dcdcdc</color>
+    <color name="brown">#5f5e5b</color>
+    <color name="fb_color">#3b5998</color>
+    <color name="menu_bg">#474747</color>
+    <color name="red">#ff0000</color>
+
+    <!-- Auth -->
+    <color name="color_description_text">#a5a5a5</color>
+    <color name="color_content_text">#515151</color>
+
+    <!-- App theme -->
+    <color name="color_primary">#49aacd</color>
+    <color name="color_primary_dark">#49aacd</color>
+
+    <!-- Friends -->
+    <color name="top_bar_color">#297F9E</color>
+
+    <!-- Tags -->
+    <color name="tag_bg">#7dd1e4</color>
+
+    <!-- Business -->
+    <color name="business_text">#999999</color>
+    <color name="business_tab_color">#f3f3f3</color>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_voucher_rl_business"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_voucher_bg"
+    android:layout_marginTop="10dp"
+    android:padding="10dp">
+
+    <com.vouchify.vouchify.view.CustomClickTextView
+        android:id="@+id/item_voucher_txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/item_vouches_time" />
+
+    <com.vouchify.vouchify.view.CustomClickTextView
+        android:id="@+id/item_voucher_txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/item_vouches_time" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_voucher_txt_name"
+        android:layout_marginTop="10dp">
+
+        <com.vouchify.vouchify.view.CustomImageButton
+            android:id="@+id/item_voucher_imv_business"
+            android:layout_width="@dimen/item_vouches_business_imv"
+            android:layout_height="@dimen/item_vouches_business_imv"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_action_logout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/item_voucher_imv_business"
+            android:orientation="vertical">
+
+            <com.vouchify.vouchify.view.CustomClickTextView
+                android:id="@+id/item_voucher_txt_business_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/item_vouches_business_name"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" />
+
+            <com.vouchify.vouchify.view.CustomClickTextView
+                android:id="@+id/item_voucher_txt_business_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/item_vouches_business_name" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

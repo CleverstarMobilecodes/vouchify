@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/auth_screen_padding">
+
+        <com.vouchify.vouchify.view.CustomImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/imv_logo" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/auth_step_button_margin_top"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:src="@drawable/imv_register_stage1" />
+
+        <com.vouchify.vouchify.view.CustomTextView
+            android:id="@+id/step1_txt_title_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/auth_view_spacing"
+            android:layout_marginTop="15dp"
+            android:text="@string/enter_your_email"
+            android:textColor="@color/black"
+            android:textSize="@dimen/auth_content_title"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/step1_ll_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_auth_bg"
+            android:gravity="center"
+            android:paddingEnd="0dp"
+            android:paddingStart="@dimen/auth_edt_drawable_padding"
+            android:visibility="gone">
+
+            <com.vouchify.vouchify.view.CustomImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_login_user" />
+
+            <com.vouchify.vouchify.view.CustomEditText
+                android:id="@+id/step1_edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/enter_your_email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/edt_padding"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/edt_text_size" />
+        </LinearLayout>
+
+        <com.vouchify.vouchify.view.CustomTextView
+            android:id="@+id/step1_txt_title_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/auth_view_spacing"
+            android:layout_marginTop="15dp"
+            android:text="@string/enter_your_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/auth_content_title"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/step1_ll_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_auth_bg"
+            android:gravity="center"
+            android:paddingEnd="0dp"
+            android:paddingStart="@dimen/auth_edt_drawable_padding"
+            android:visibility="gone">
+
+            <com.vouchify.vouchify.view.CustomImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_login_user" />
+
+            <com.vouchify.vouchify.view.CustomEditText
+                android:id="@+id/step1_edt_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/first_name"
+                android:inputType="textCapWords"
+                android:padding="@dimen/edt_padding"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/edt_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/step1_ll_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/auth_view_spacing"
+            android:background="@drawable/edt_auth_bg"
+            android:gravity="center"
+            android:paddingEnd="0dp"
+            android:paddingStart="@dimen/auth_edt_drawable_padding"
+            android:visibility="gone">
+
+            <com.vouchify.vouchify.view.CustomImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_login_user" />
+
+            <com.vouchify.vouchify.view.CustomEditText
+                android:id="@+id/step1_edt_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/last_name"
+                android:inputType="textCapWords"
+                android:padding="@dimen/edt_padding"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/edt_text_size" />
+        </LinearLayout>
+
+        <com.vouchify.vouchify.view.CustomClickTextView
+            android:id="@+id/step1_btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/auth_step_button_margin_top"
+            android:background="@drawable/btn_auth_bg"
+            android:gravity="center"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

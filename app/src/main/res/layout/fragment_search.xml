@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/search_ll_business"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_layout"
+            android:background="@color/brown"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/edt_search_bg"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp">
+
+                <com.vouchify.vouchify.view.CustomImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_action_search" />
+
+                <com.vouchify.vouchify.view.DelayAutoCompleteTextView
+                    android:id="@+id/search_edt_filter"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:hint="@string/search_edt_hint"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/search_edt"
+                    tools:ignore="Deprecated" />
+
+                <com.vouchify.vouchify.view.CustomImageButton
+                    android:id="@+id/search_btn_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_action_close"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.vouchify.vouchify.view.CustomTextView
+            android:id="@+id/search_category_tv_title"
+            style="@style/searchTitle"
+            android:layout_below="@+id/search_ll_business"
+            android:text="@string/explore_categories"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_category_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_category_tv_title"
+            android:clipToPadding="false"
+            android:padding="5dp" />
+
+        <LinearLayout
+            android:id="@+id/search_ll_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_ll_business"
+            android:background="@color/grey"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/edt_search_bg"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp">
+
+                <com.vouchify.vouchify.view.CustomImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_login_location" />
+
+                <com.vouchify.vouchify.view.DelayAutoCompleteTextView
+                    android:id="@+id/search_edt_filter_location"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/location_edt_hint"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/search_edt"
+                    tools:ignore="Deprecated" />
+
+                <com.vouchify.vouchify.view.CustomImageButton
+                    android:id="@+id/search_btn_close_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_action_close"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_location_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_ll_location"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:padding="7dp"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_business_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_ll_location"
+            android:clipToPadding="false"
+            android:padding="7dp" />
+    </RelativeLayout>
+</FrameLayout>

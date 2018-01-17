@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RadioGroup
+            android:id="@+id/feed_rg_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/top_bar_color"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/feed_rb_friend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="@dimen/friend_bar_padding"
+                android:text="@string/by_friends"
+                android:textColor="@color/friend_top_bar"
+                android:textSize="@dimen/btn_text_size"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/feed_rb_near"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="@dimen/friend_bar_padding"
+                android:text="@string/near_me"
+                android:textColor="@color/friend_top_bar"
+                android:textSize="@dimen/btn_text_size"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/feed_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/feed_rg_type"
+            android:clipToPadding="false"
+            android:padding="7dp" />
+
+        <com.vouchify.vouchify.view.CustomTextView
+            android:id="@+id/feed_txt_no_acivity"
+            style="@style/txtemptyTheme"
+            android:layout_below="@+id/feed_rg_type"
+            android:textSize="16sp"
+            android:text="@string/no_activity_by_your_friends"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

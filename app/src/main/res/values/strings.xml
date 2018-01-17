@@ -1,0 +1,207 @@
+<resources>
+    <string name="app_name">Vouchify</string>
+
+    <string name="ok">OK</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="next">Next</string>
+    <string name="done">Done</string>
+    <string name="edit">Edit</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="call">Call</string>
+    <string name="enquire">Enquire</string>
+    <string name="fb_id">823544591095134</string>
+
+    <!-- Auth -->
+    <string name="or">or</string>
+    <string name="and">and</string>
+    <string name="email">Email</string>
+    <string name="log_in">Log in</string>
+    <string name="mobile">Mobile</string>
+    <string name="log_out">LOG OUT</string>
+    <string name="sign_up">Sign up</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="last_name">Last Name</string>
+    <string name="your_email">Your Email</string>
+    <string name="first_name">First Name</string>
+    <string name="skip_for_now">Skip for now</string>
+    <string name="mobile_phone">Mobile Phone</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_your_phone">Enter your mobile number</string>
+    <string name="start_using_vouchify">Start using Vouchify Now</string>
+    <string name="please_enter_your_email">Please enter your email</string>
+    <string name="sign_up_finish_text">Congratulations, you have successfully joined Vouchify!</string>
+    <string name="step2_explain">We will never share your mobile details with others \n\nMobile verification is needed
+    to help ensure all Vouches for a business are from a real person allow you to claim any Vouches you make using
+    your mobile number</string>
+
+    <!-- Sign up -->
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="sign_up_with_fb">Sign up with Facebook</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="sign_up_bottom_text">By using this app, you agree to our</string>
+
+    <!-- Sign in -->
+    <string name="sign_up_now">Sign up now</string>
+    <string name="log_in_with_fb">Log in with Facebook</string>
+    <string name="do_not_have_account">Don\'t have an account?</string>
+    <string name="request_password_reset"><u>Request password reset</u></string>
+    <string name="find_your_business">Find the businesses your\nfriends love</string>
+
+    <!-- Connect -->
+    <string name="do_this_later">Do this later</string>
+    <string name="connect_phone_contacts">1. Connect Phone contacts</string>
+    <string name="connect_facebook_friends">2. Connect Facebook friends</string>
+    <string name="connect_content_title">Vouchify is better with friends</string>
+    <string name="connect_content_text">Connect your Facebook and Phone contacts to see which of your
+        friends are already on Vouchify and view the businesses they love</string>
+
+    <!-- For got password-->
+    <string name="for_got_password">Forgot your password?</string>
+    <string name="forgot_title">Forgot your Vouchify password?</string>
+    <string name="please_check_your_inbox">Please check your inbox</string>
+    <string name="reset_password_success">We just sent you a special link via email to reset your password</string>
+    <string name="forgot_description">Enter your email address and we will send you a special link to reset your password</string>
+
+    <!-- Title/Tabs -->
+    <string name="feed">Feed</string>
+    <string name="vouch">Vouch</string>
+    <string name="search">Search</string>
+    <string name="friends">Friends</string>
+    <string name="photo">PHOTO</string>
+    <string name="business">Business</string>
+    <string name="add_business_image">Add Business Image</string>
+    <string name="my_vouches">Vouches</string>
+    <string name="edit_user">Edit user</string>
+    <string name="edit_vouch">Edit Vouch</string>
+    <string name="create_vouch">Create Vouch</string>
+    <string name="personal_details">Personal details</string>
+
+    <!-- Error -->
+    <string name="err_mobile_phone_required">Mobile phone is required.</string>
+    <string name="err_first_name_required">First name is required.</string>
+    <string name="err_password_do_not_match">Passwords do not match.</string>
+    <string name="err_password_required">Password is required.</string>
+    <string name="err_email_required">Email is required.</string>
+    <string name="err_last_name_required">Last name is required.</string>
+    <string name="err_facebook_login">Facebook sign in error.</string>
+
+    <!-- Business -->
+    <string name="business_all_vouches">All Vouches:</string>
+    <string name="business_vouches">Vouches:</string>
+    <string name="business_friend_vouches">Friend\'s Vouches:</string>
+    <string name="business_add_image">Add business image</string>
+    <string name="add_image">Add image</string>
+
+    <!-- Verify -->
+    <string name="verify">Verify</string>
+    <string name="verify_phone">Verify Phone</string>
+    <string name="verify_mobile">Verify Mobile</string>
+    <string name="send_a_new_code">Send a new code</string>
+    <string name="verification_code">Verification code:</string>
+    <string name="please_verify_number">Please verify your\n phone number</string>
+    <string name="phone_verify_title">We have sent a verification code to %s. Enter the ode to verify this phone number. Didn\'t receive a code?</string>
+
+    <!-- Profile -->
+    <string name="user_name">User name</string>
+    <string name="contact_details">Contact details</string>
+    <string name="change_password">Change Password</string>
+    <string name="view_my_vouchers">View my vouches</string>
+
+    <!-- Change password -->
+    <string name="new_password">New password</string>
+    <string name="current_password">Current password</string>
+    <string name="retype_new_password">Retype new password</string>
+    <string name="password_do_not_match">Passwords do not match</string>
+    <string name="password_was_changed">Password was successfully changed</string>
+
+    <!-- Feed -->
+    <string name="no_activity_by_your_friends">Sorry, not activity by your friends</string>
+    <string name="no_activity_near_you">Sorry, not activity near you</string>
+    <!-- Vouch -->
+    <string name="there_are_no_vouches">The are no vouches yet</string>
+    <string name="added_a_vouch">Added a vouch</string>
+    <string name="delete_vouch">Delete Vouch</string>
+    <string name="continue_vouch">Done</string>
+    <string name="edit_vouch_service">Service(s) that you\'re recommending</string>
+    <string name="edit_vouch_description_hint">Tell your friends why you love this business (min 10 characters)</string>
+    <string name="edit_vouch_alert_not_input_correct">Please describe why you are \nrecommending this business \n(min 10 characters)</string>
+    <string name="delete_vouch_alert">Do you want to delete this Vouch?</string>
+    <string name="vouch_was_deleted">Vouch was successfully deleted.</string>
+    <string name="edit_vouch_no_services">Please select which service(s) you are recommending</string>
+
+    <!-- Search -->
+    <string name="search_edt_hint">What are you looking for?</string>
+    <string name="explore_categories">Explore categories</string>
+
+    <!-- Friends -->
+    <string name="friend">Friend</string>
+    <string name="contacts">Contacts</string>
+    <string name="facebook">Facebook</string>
+    <string name="type_to_search">Type to search</string>
+    <string name="view_phone_contacts">View phone \ncontacts</string>
+    <string name="view_fb_contacts">View Facebook \ncontacts</string>
+    <string name="friends_connect_title">See which of your friends are \nalready on Vouchify and view the businesses they love</string>
+
+    <!-- Menu -->
+    <string name="about">ABOUT &amp; FAQ</string>
+    <string name="contact_us">CONTACT US</string>
+    <string name="add_a_business">ADD A BUSSINESS</string>
+    <string name="contact_us_email">support@vouchify.com.au</string>
+    <string name="contact_us_subject">Vouchify Feedback</string>
+
+    <!-- Business search result -->
+    <string name="search_result">Search results</string>
+    <string name="add_new_business_now">Add new business now</string>
+    <string name="sorry_no_business_found">Sorry! No business found</string>
+    <string name="did_not_find_the_business">Did not find the business you were looking for?</string>
+    <string name="you_should_verify_mobile">Mobile verification is needed to make sure that every recommendation is from a real person. Please verify your mobile number now.\n\nWe will never share your mobile details with others.</string>
+    <string name="location_is_required">Location is required.</string>
+    <string name="business_or_business_service_is_required">You should choose business or business service.</string>
+    <string name="current_location">CURRENT LOCATION</string>
+    <string name="business_service">BUSINESS SERVICES</string>
+    <string name="businesses">BUSINESSES</string>
+    <string name="location_edt_hint">Current Location</string>
+    <string name="tab_about">About</string>
+    <string name="tab_vouches">Vouches</string>
+    <string name="tab_photos">Photos</string>
+    <string name="no_image_found">No images found for this business</string>
+    <string name="add_an_image">Add an image</string>
+    <string name="vouchify_enquiry_for">Vouchify enquiry for</string>
+    <string name="choose_email_address">Choose email address:</string>
+    <string name="choose_mobile_phone">Choose number to call:</string>
+
+    <!-- Share -->
+    <string name="share_on_facebook">Share on Facebook</string>
+    <string name="no_thanks">No Thanks</string>
+    <string name="thanks">Thank you!</string>
+    <string name="share_content_text">Your recommendation has been successfully completed \n\nWould you like to post your recommendation to your Facebook feed to make it visible to your friends?</string>
+    <string name="nothanks_content_text">Your recommendation has been successfully completed</string>
+
+    <!-- Network -->
+    <string name="err_no_internet_connection">Please check Internet connection</string>
+
+    <string name="by_friends">by Friends</string>
+    <string name="near_me">near me</string>
+
+    <!-- Tabs -->
+    <string-array name="tab_titles">
+        <item>Home</item>
+        <item>Feed</item>
+        <item>Friends</item>
+        <item>Me</item>
+    </string-array>
+
+    <integer-array name="tab_drawables">
+        <item>@drawable/tab_home_src</item>
+        <item>@drawable/tab_feed_src</item>
+        <item>@drawable/tab_friends_src</item>
+        <item>@drawable/tab_profile_src</item>
+    </integer-array>
+    <string name="title_activity_maps">Map</string>
+</resources>

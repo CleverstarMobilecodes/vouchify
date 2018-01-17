@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="35dp">
+
+        <com.vouchify.vouchify.view.CustomImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_vouchify_auth" />
+
+        <com.vouchify.vouchify.view.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/find_your_business"
+            android:textColor="@color/white"
+            android:layout_marginBottom="40dp"
+            android:textSize="22sp" />
+
+        <com.vouchify.vouchify.view.CustomClickTextView
+            android:id="@+id/auth_btn_sign_up"
+            style="@style/authButton"
+            android:text="@string/sign_up"
+            android:textColor="@color/black" />
+
+        <com.vouchify.vouchify.view.CustomClickTextView
+            android:id="@+id/auth_btn_login"
+            style="@style/authButton"
+            android:text="@string/log_in"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@null"
+        android:src="@drawable/imv_background2" />
+</RelativeLayout>

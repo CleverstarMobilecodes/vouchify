@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_frame" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/menu_bg">
+
+        <LinearLayout
+            android:id="@+id/menu_ll_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/profile_txt_padding">
+
+            <com.vouchify.vouchify.view.ImageViewWithText
+                android:id="@+id/menu_item_imv_profile"
+                android:layout_width="@dimen/menu_profile_imv"
+                android:layout_height="@dimen/menu_profile_imv" />
+
+            <com.vouchify.vouchify.view.CustomClickTextView
+                android:id="@+id/menu_item_txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/menu_item_title" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/menu_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/menu_item_logout"
+            android:layout_below="@+id/menu_ll_info"
+            android:overScrollMode="never"
+            android:padding="@dimen/menu_item_padding" />
+
+        <com.vouchify.vouchify.view.CustomClickTextView
+            android:id="@+id/menu_item_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:drawablePadding="5dp"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:drawableStart="@drawable/ic_action_logout"
+            android:gravity="center_vertical"
+            android:padding="@dimen/menu_item_padding"
+            android:text="@string/log_out"
+            android:textColor="@color/white"
+            android:textSize="@dimen/menu_item_text" />
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>
